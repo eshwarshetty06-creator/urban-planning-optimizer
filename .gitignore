@@ -1,0 +1,25 @@
+﻿# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+*.class
+*.pyc
+
+# React build
+build/
+dist/
+.DS_Store
+
+# Temporary outputs (keep directories)
+backend/app/Uploaded_maps/*
+backend/app/processed/*
+backend/Uploaded_maps/*
+backend/processed/*

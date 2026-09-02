@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0f131d;
+  --bg-secondary: #0a0e18;
+  --accent-emerald: #4edea3;
+  --accent-emerald-dim: rgba(78, 222, 163, 0.1);
+  --accent-purple: #d0bcff;
+  --accent-purple-dim: rgba(208, 188, 255, 0.1);
+  --glass-fill: rgba(38, 42, 53, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --text-primary: #dfe2f1;
+  --text-secondary: #bbcabf;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0f131d] text-[#dfe2f1] antialiased overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .hud-glass {
+    @apply bg-opacity-60 backdrop-blur-xl border border-white/5 shadow-2xl;
+    background-color: var(--glass-fill);
+  }
+
+  .hud-card {
+    @apply hud-glass rounded-lg overflow-hidden relative;
+  }
+
+  .hud-card::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(135deg, rgba(78, 222, 163, 0.05) 0%, transparent 50%);
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 bg-[#10b981] text-[#003824] font-bold rounded-md transition-all duration-300 
+           hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:scale-105 active:scale-95;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 border border-[#d0bcff]/40 text-[#d0bcff] font-bold rounded-md transition-all duration-300 
+           hover:bg-[#d0bcff]/10 hover:shadow-[0_0_15px_rgba(208,188,255,0.2)];
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .neon-glow-emerald {
+    box-shadow: 0 0 15px var(--accent-emerald-dim);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 15px var(--accent-purple-dim);
+  }
+}
+
+@layer utilities {
+  .bg-grid-mesh {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
+  .scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background: linear-gradient(0deg, 
+      rgba(0, 0, 0, 0) 0%, 
+      rgba(78, 222, 163, 0.02) 50%, 
+      rgba(0, 0, 0, 0) 100%);
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 8s linear infinite;
+  }
+
+  .text-hud {
+    font-family: 'Space Grotesk', sans-serif;
+    @apply uppercase tracking-widest text-[0.65rem] font-bold;
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(78, 222, 163, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(78, 222, 163, 0.4);
+}
+
+@keyframes scan {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { top: 110%; opacity: 0; }
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes bar-pulse {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.3; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+.animate-bar-pulse {
+  animation: bar-pulse 1.5s ease-in-out infinite;
+}
