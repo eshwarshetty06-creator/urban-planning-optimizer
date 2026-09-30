@@ -10,7 +10,7 @@
 
 **An AI-powered computer vision platform for urban planning, satellite map analysis, and urban heat island mitigation.**
 
-[Quick Start](#-quick-start) • [Key Features](#-key-features) • [Visual Demo](#-visual-demo) • [How It Works](#-how-it-works) • [API Reference](#-api-reference)
+[Quick Start](#-quick-start) • [Key Features](#-key-features) • [How It Works](#-how-it-works) • [API Reference](#-api-reference)
 
 </div>
 
@@ -31,17 +31,6 @@ Rapid urbanization across the world has accelerated the **Urban Heat Island (UHI
 |                                    [Localized Cooling Forecast & Interactive Analytics HUD]        |
 +----------------------------------------------------------------------------------------------------+
 ```
-
----
-
-## 📸 Visual Demo
-
-| 1. Input Satellite Image | 2. Thermal Radiance Heatmap | 3. Optimized Green Restructure |
-| :---: | :---: | :---: |
-| ![Original Satellite Map](demo%20picture/demo.jpg) | ![Thermal Heatmap](demo%20picture/demo%202.jpg) | ![Optimized Green Restructure](demo%20picture/demo3.jpg) |
-| *Raw multi-spectral satellite imagery* | *Infrared heat trap isolation* | *Biomass injection + Cool pavement* |
-
-> 🎥 **Demo Video:** A full video walkthrough is available in `Demo vedio/Urban Planning Optimizer - Smart City Planning & Green Space Analysis - 3 April 2026.mp4`.
 
 ---
 
@@ -207,9 +196,3 @@ A Gaussian blur filter ($15 \times 15$ kernel) models radiant heat diffusion int
 | **Thermal Heatmap** | `/heatmap` | False-color infrared map displaying high-heat vectors and cool zones. |
 | **Optimizer** | `/optimize` | Interactive before/after map comparison, cooling delta, and albedo score. |
 | **Analytics** | `/results` | Chart.js doughnut and bar visualizers auditing environmental efficiency. |
-
----
-
-## 📄 License
-
-This project is open-source and released under the **MIT License**.
