@@ -7,6 +7,7 @@ import UploadMap from "./pages/UploadMap";
 import Analyze from "./pages/Analyze";
 import Heatmap from "./pages/Heatmap";
 import Optimize from "./pages/Optimize";
+import Results from "./pages/Results";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/analyze" element={<Analyze />} />
             <Route path="/heatmap" element={<Heatmap />} />
             <Route path="/optimize" element={<Optimize />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </div>
       </div>

@@ -15,7 +15,7 @@ from .services.optimizer import optimize_green_spaces
 
 BASE_DIR = Path(__file__).resolve().parent
 
-app = FastAPI(title="Urban Planning & Green Space Optimizer API")
+app = FastAPI(title="Urban Plan Optimizer API")
 
 app.add_middleware(
     CORSMiddleware,

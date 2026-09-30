@@ -34,7 +34,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-[0.15em] text-[#dfe2f1] font-['Space_Grotesk'] leading-none">
-                VERIDIAN <span className="text-[#4edea3]">PRIME</span>
+                URBAN PLAN <span className="text-[#4edea3]">OPTIMIZER</span>
               </span>
               <div className="flex items-center space-x-2 mt-1">
                 <span className="text-[9px] uppercase tracking-widest text-[#bbcabf] font-bold">Orbital Analytics Node</span>
@@ -49,6 +49,8 @@ export default function Navbar() {
             <NavLink to="/upload" isActive={isActive("/upload")}>Telemetry</NavLink>
             <NavLink to="/analyze" isActive={isActive("/analyze")}>Analysis</NavLink>
             <NavLink to="/heatmap" isActive={isActive("/heatmap")}>Heatmap</NavLink>
+            <NavLink to="/optimize" isActive={isActive("/optimize")}>Optimize</NavLink>
+            <NavLink to="/results" isActive={isActive("/results")}>Analytics</NavLink>
           </div>
 
           {/* System Status / CTA */}
@@ -85,6 +87,8 @@ export default function Navbar() {
               <MobileNavLink to="/upload" isActive={isActive("/upload")} onClick={() => setMobileMenuOpen(false)}>Telemetry Upload</MobileNavLink>
               <MobileNavLink to="/analyze" isActive={isActive("/analyze")} onClick={() => setMobileMenuOpen(false)}>Land Analysis</MobileNavLink>
               <MobileNavLink to="/heatmap" isActive={isActive("/heatmap")} onClick={() => setMobileMenuOpen(false)}>Heatmap Engine</MobileNavLink>
+              <MobileNavLink to="/optimize" isActive={isActive("/optimize")} onClick={() => setMobileMenuOpen(false)}>Optimizer</MobileNavLink>
+              <MobileNavLink to="/results" isActive={isActive("/results")} onClick={() => setMobileMenuOpen(false)}>Analytics</MobileNavLink>
             </div>
           </div>
         )}
